@@ -1,8 +1,11 @@
-body {
-  height: 90vh;
-  margin: 0;
-  .clickable {
-    cursor: pointer;
-  }
+@import "https://cdn.jsdelivr.net/npm/primeflex@2.0.0/primeflex.css";
 
+body {
+  //height: 90vh;
+  margin: 0;
+
+
+}
+.clickable {
+  cursor: pointer;
 }

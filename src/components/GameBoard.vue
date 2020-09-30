@@ -3,6 +3,12 @@
         <div class="p-col-12">
             <h1>Aim game</h1>
         </div>
+        <div class="clickable p-col-12 p-text-uppercase" v-on:click="start">
+            play
+        </div>
+        <div class="clickable p-col-12 p-text-uppercase" v-on:click="stop">
+            stop
+        </div>
         <div class="p-col-6">
             {{$score.points}} points
         </div>
@@ -29,10 +35,14 @@
                 //setInterval(function () => this.timer++, 1000);
 
         },
-        watch: {
 
-
-
+        methods: {
+            start() {
+                this.$score.startTimer();
+            },
+            stop() {
+                this.$score.resetGame();
+            }
         }
     }
 </script>

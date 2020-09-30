@@ -12,6 +12,7 @@ let Score = {
         this.start = false;
     },
     startTimer() {
+        this.start = true;
         setInterval(() => {
             if(this.timer >0)
                 this.timer --;
