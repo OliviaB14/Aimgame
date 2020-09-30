@@ -1,15 +1,23 @@
 let Score = {
     points : 0,
-    timer: 0,
+    timer: 10,
+    start: false,
 
     addPoint() {
         this.points++;
-        console.log(this.points)
     },
     resetGame() {
         this.timer = 0;
         this.points = 0;
+        this.start = false;
+    },
+    startTimer() {
+        setInterval(() => {
+            if(this.timer >0)
+                this.timer --;
+        }, 1000);
     }
 };
 
 export default Score;
+

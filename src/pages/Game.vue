@@ -1,6 +1,9 @@
 <template>
     <div class="p-grid">
         <div class="p-col-12">
+            <PlayButton></PlayButton>
+        </div>
+        <div class="p-col-12">
             <ColorCircle></ColorCircle>
         </div>
     </div>
@@ -8,9 +11,10 @@
 
 <script>
     import ColorCircle from "@/components/ColorCircle";
+    import PlayButton from "@/components/PlayButton";
     export default {
         name: "Game",
-        components: {ColorCircle}
+        components: {PlayButton, ColorCircle}
     }
 </script>
 

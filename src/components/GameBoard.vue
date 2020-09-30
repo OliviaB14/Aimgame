@@ -3,9 +3,11 @@
         <div class="p-col-12">
             Game board
         </div>
-        <div class="p-col-12">
-            {{points}} points
-            {{timer}}
+        <div class="p-col-12 p-sm-6">
+            {{$score.points}} points
+        </div>
+        <div class="p-col-12 p-sm-6">
+            {{$score.timer}} s
         </div>
     </div>
 </template>
@@ -18,20 +20,18 @@
         data() {
             return {
                 timer: 0,
-                points: 0,
+                points: Score.points,
             }
         },
-        created () {
+        mounted () {
             this.timer = Score.timer;
-            this.points = Score.points;
+
                 //setInterval(function () => this.timer++, 1000);
 
         },
-        computed: {
+        watch: {
 
-           time: () => {
 
-           }
 
         }
     }
