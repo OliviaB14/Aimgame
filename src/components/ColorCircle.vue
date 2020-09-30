@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="circle" :style="{'background': color, 'top': topX, 'left': leftY}"
+        <div class="circle" :style="{'background': color, 'top': topX, 'right': leftY}"
              ref="colorCircle"
         v-on:click="getPoint()"></div>
     </div>
@@ -15,10 +15,8 @@
         mounted() {
             let x = Math.floor(Math.random() * document.body.clientWidth);
             let y = Math.floor(Math.random() * document.body.clientHeight);
-            this.topX = x;
-            this.leftY = y;
-            console.log(x, y)
-            //console.log(document.body.clientWidth)
+            this.topX = x  + 'px';
+            this.leftY = y + 'px';
         },
         data() {
           return {
