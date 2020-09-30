@@ -1,12 +1,12 @@
 <template>
-    <div class="p-grid">
+    <div class="p-grid" id="gameBoard">
         <div class="p-col-12">
-            Game board
+            <h1>Aim game</h1>
         </div>
-        <div class="p-col-12 p-sm-6">
+        <div class="p-col-6">
             {{$score.points}} points
         </div>
-        <div class="p-col-12 p-sm-6">
+        <div class="p-col-6">
             {{$score.timer}} s
         </div>
     </div>
@@ -37,6 +37,15 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+#gameBoard {
+    background: #eee;
+    border: 1px solid grey;
 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 </style>

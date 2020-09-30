@@ -13,8 +13,7 @@
     export default {
         name: "ColorCircle",
         mounted() {
-            let x = Math.floor(Math.random() * document.body.clientWidth);
-            let y = Math.floor(Math.random() * document.body.clientHeight);
+            let {x, y} = this.getRandomCoord();
             this.topX = x  + 'px';
             this.leftY = y + 'px';
         },
@@ -34,6 +33,14 @@
         methods: {
             getPoint() {
                 Score.addPoint();
+                let {x,y} = this.getRandomCoord();
+                this.topX = x  + 'px';
+                this.leftY = y + 'px';
+            },
+            getRandomCoord() {
+                let x = Math.floor(Math.random() * document.body.clientWidth);
+                let y = Math.floor(Math.random() * document.body.clientHeight);
+                return {x, y};
             }
         }
     }
@@ -42,6 +49,8 @@
 <style scoped lang="scss">
     .circle {
         position: absolute;
+
+        z-index: 1;
 
         width: 100px;
         height: 100px;
